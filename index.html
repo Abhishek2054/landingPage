@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Fantasy Guruji</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: #fff;
+            padding: 40px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center ;
+        }
+        img {
+            width: 100px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .buttons{
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            color: #fff;
+        }
+        p{
+            text-wrap: wrap;
+            max-width: 230px;
+            text-align: center;
+        }
+        .join-btn{
+            background-color: #0088cc;
+        }
+        .cancel-btn{
+            background-color: #ff5252;
+        }
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .message {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="messageContainer">
+        <div class="message">Redirecting you to Telegram in: <span class="countdown" id="countdown">5</span></div>
+    </div>
+    <div class="container">
+        <!-- Logo -->
+        <img src="./sports fantasy.jpeg" alt="Logo"> <!-- Replace 'logo.png' with your logo file -->
+        <h2>Sports Fantasy Guruji!</h2>
+        <p>Welcome to one of the India's leading and most trusted fantasy experts Telegram channel</p>
+        <!-- <p>You'll be redirected to our Telegram channel shortly, or you can join us by clicking on Join button.</p> -->
+        <div class="buttons">
+            <!-- Join Now Button -->
+            <a href="https://rb.gy/1memsy" target="_blank">
+                <button class="join-btn">Join Now</button>
+            </a>
+            <!-- Cancel Button -->
+            <!-- <button class="cancel-btn" onclick="alert('Redirection cancelled!');">Cancel</button> -->
+        </div>
+    </div>
+
+    <script>
+        var countdownElement = document.getElementById("countdown");
+        var countdown = 5;
+
+        var interval = setInterval(function() {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown === 0) {
+                clearInterval(interval);
+                window.location.href = "https://rb.gy/1memsy";  // Replace with your Telegram link
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
